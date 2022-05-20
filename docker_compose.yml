@@ -1,0 +1,21 @@
+
+version:"2.2"
+services:
+  course_a:
+    build:"D:\Esprit\sts Projects\Course"
+    ports:8083:8082
+    image:"course"
+    depends_on:
+      eureka-server_a
+  
+  course_b:
+    build:"D:\Esprit\sts Projects\Course"
+    ports:8084:8082
+    image:"course"
+    depends_on:
+      eureka-server_a
+  
+  eureka-server_a:
+    build:"D:\Esprit\sts Projects\EurekaServer"
+    ports:8762:8761
+    image:"eureka-server"
