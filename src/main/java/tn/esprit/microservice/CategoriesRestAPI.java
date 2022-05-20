@@ -61,7 +61,7 @@ public class CategoriesRestAPI {
 	 
 	@PutMapping(value="/update/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)
-	public ResponseEntity<Categories> updateCourse(@PathVariable(value ="id")int id, @RequestBody Categories course) {
+	public ResponseEntity<Categories> updateCategories(@PathVariable(value ="id")int id, @RequestBody Categories course) {
 		return new ResponseEntity<>(categorieservice.updateCategories(course, id),HttpStatus.OK);
 	}
 	
