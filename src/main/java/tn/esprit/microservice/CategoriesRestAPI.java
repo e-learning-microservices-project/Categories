@@ -39,6 +39,14 @@ public class CategoriesRestAPI {
 			return null;
 		}
 	}
+	
+	@GetMapping("/getstudent/{id}")
+	@ResponseStatus(HttpStatus.OK)
+	public String EtudiantExist(@PathVariable(value ="id") int id) {
+		
+		return categorieservice.studentExist(id);
+		
+	}
 	 
 	@PutMapping(value="/update/{id}",produces = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseStatus(HttpStatus.OK)

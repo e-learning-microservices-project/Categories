@@ -36,9 +36,9 @@ public class Categories {
 		return teachers;
 	}
 
-	/*public void setTeachers_id(List<Integer> teacher_id) {
-		this.teachers_id = teacher_id;
-	}*/
+	public void setTeachers_id(int teacher_id) {
+		this.teachers = teacher_id;
+	}
 
 	public String getName() {
 		return name;
@@ -60,9 +60,9 @@ public class Categories {
 		return students;
 	}
 
-	/*public void setStudents_id(List<Integer> students_id) {
-		this.students_id = students_id;
-	}*/
+	public void setStudents_id(int students_id) {
+		this.students = students_id;
+	}
 
 	/*public void setId(int id) {
 		this.id = id;
