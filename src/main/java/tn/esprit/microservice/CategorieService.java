@@ -52,13 +52,27 @@ public class CategorieService{
 		return categoriesRepository.findAll();
 	}
 
-
+	//getCategory
+	public Optional<Categories> getCategory (int id)
+	{
+		if (categoriesRepository.findById(id)==null) {
+		return categoriesRepository.findById(id);
+		}else{
+			return Optional.empty();
+		}
+	}
 	
 	//exist student
 	public String studentExist(long id) {
-		String result = 
+		String result = null;
+		try {
+		result = 
 				restTemplate.
 				getForObject("http://localhost:8087/api/etudiants/hello", String.class,id);
+		
+		 }catch (Exception e) {
+			 return "Server not found";	
+		}
 		return result;			
 	}
 

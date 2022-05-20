@@ -3,6 +3,7 @@ package tn.esprit.microservice;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -40,6 +41,16 @@ public class CategoriesRestAPI {
 		}
 	}
 	
+	@GetMapping("/get/{id}")
+	@ResponseStatus(HttpStatus.OK)
+	public Optional<Categories> getcategory(@PathVariable(value ="id") int id) {
+		if (categorieservice != null) {
+		return categorieservice.getCategory(id);
+		}else {
+			return null;
+		}
+	}
+	
 	@GetMapping("/getstudent/{id}")
 	@ResponseStatus(HttpStatus.OK)
 	public String EtudiantExist(@PathVariable(value ="id") int id) {
@@ -59,4 +70,6 @@ public class CategoriesRestAPI {
 	public ResponseEntity<String> deleteCourse(@PathVariable(value ="id")int id) {
 		return new ResponseEntity<>(categorieservice.deleteCourse(id),HttpStatus.OK);
 	}
+	
+	
 }
