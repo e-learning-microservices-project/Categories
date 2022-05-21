@@ -42,8 +42,8 @@ public class CategorieService{
 		if (categoriesRepository.findById(id).isPresent())
 		{
 			categoriesRepository.deleteById(id);
-			return "Course deleted!";
-		}return "Course not found!";
+			return "Category deleted!";
+		}return "Category not found!";
 	}
 	
 	//getCategories
