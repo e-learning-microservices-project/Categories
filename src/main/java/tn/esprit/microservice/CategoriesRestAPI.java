@@ -44,11 +44,9 @@ public class CategoriesRestAPI {
 	@GetMapping("/get/{id}")
 	@ResponseStatus(HttpStatus.OK)
 	public Optional<Categories> getcategory(@PathVariable(value ="id") int id) {
-		if (categorieservice != null) {
+		
 		return categorieservice.getCategory(id);
-		}else {
-			return null;
-		}
+		
 	}
 	
 	@GetMapping("/getstudent/{id}")

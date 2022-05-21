@@ -55,11 +55,13 @@ public class CategorieService{
 	//getCategory
 	public Optional<Categories> getCategory (int id)
 	{
-		if (categoriesRepository.findById(id)==null) {
+		//if (categoriesRepository.findById(id)==null) {
+		//return categoriesRepository.findById(id);
+		//}else{
+		//	return Optional.empty();
+		//}
+		
 		return categoriesRepository.findById(id);
-		}else{
-			return Optional.empty();
-		}
 	}
 	
 	//exist student
