@@ -15,7 +15,7 @@ public class Categories {
 
 
 	
-	public Categories(int teachers, String name, String description, int students) {
+	public Categories(String name, String description) {
 		super();
 		//this.teachers = teachers;
 		this.name = name;
