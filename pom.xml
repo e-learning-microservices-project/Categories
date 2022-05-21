@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>tn.esprit.microservices.course</groupId>
-	<artifactId>course-service</artifactId>
+	<artifactId>categories-service</artifactId>
 	<version>1.0</version>
-	<name>course-service</name>
+	<name>categories-service</name>
 	<description>microservice course for e-learning project</description>
 	<properties>
 		<java.version>1.8</java.version>
