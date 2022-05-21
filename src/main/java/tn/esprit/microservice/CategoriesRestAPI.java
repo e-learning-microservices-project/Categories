@@ -47,6 +47,7 @@ public class CategoriesRestAPI {
 		
 		return categorieservice.getCategory(id);
 		
+		
 	}
 	
 	@GetMapping("/getstudent/{id}")

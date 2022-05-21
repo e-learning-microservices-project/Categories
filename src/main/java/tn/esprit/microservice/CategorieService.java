@@ -25,10 +25,10 @@ public class CategorieService{
 		{
 			Categories categories = categoriesRepository.findById(id).get();
 			//teachers; name;description;students;
-			categories.setTeachers_id(c.getTeachersListe());
+			//categories.setTeachers_id(c.getTeachersListe());
 			categories.setName(c.getName());
 			categories.setDescription(c.getDescription());
-			categories.setStudents_id(c.getStudentsListe());
+			//categories.setStudents_id(c.getStudentsListe());
 			
 			
 			return categoriesRepository.save(categories);
